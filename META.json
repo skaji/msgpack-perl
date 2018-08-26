@@ -4,7 +4,7 @@
       "Tokuhiro Matsuno"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.1.1, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "Minilla/v3.1.2, CPAN::Meta::Converter version 2.150010",
    "license" : [
       "perl_5"
    ],
@@ -35,6 +35,13 @@
       },
       "develop" : {
          "requires" : {
+            "Capture::Tiny" : "0",
+            "Cpanel::JSON::XS" : "4.04",
+            "JSON" : "0",
+            "JSON::MaybeXS" : "1.004000",
+            "JSON::PP" : "0",
+            "JSON::XS" : "0",
+            "Mojolicious" : "0",
             "Test::CPAN::Meta" : "0",
             "Test::LeakTrace" : "0",
             "Test::MinimumVersion::Fast" : "0.04",

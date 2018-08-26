@@ -14,4 +14,11 @@ on test => sub {
 
 on develop => sub {
     requires 'Test::LeakTrace';
+    requires 'Capture::Tiny';
+    requires 'JSON';
+    requires 'JSON::PP';
+    requires 'JSON::XS';
+    requires 'Cpanel::JSON::XS', '4.04';
+    requires 'JSON::MaybeXS', '1.004000';
+    requires 'Mojolicious' if $] > 5.010;
 };
