@@ -7,6 +7,7 @@ no warnings 'recursion';
 use Carp ();
 use B ();
 use Config;
+use Scalar::Util 'blessed';
 
 # See also
 # http://redmine.msgpack.org/projects/msgpack/wiki/FormatSpec
@@ -223,7 +224,7 @@ sub _pack {
         }
     }
 
-    elsif ( ref( $value ) eq 'Data::MessagePack::Boolean' ) {
+    elsif ( blessed $value && $value->isa('Data::MessagePack::Boolean') ) {
         return  CORE::pack( 'C', ${$value} ? 0xc3 : 0xc2 );
     }
 
